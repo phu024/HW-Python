@@ -37,3 +37,5 @@ print(customers.describe())
 order_customer = pd.read_sql_query("SELECT o.OrderID, o.CustomerID, o.EmployeeID, o.OrderDate, o.ShipAddress, c.CompanyName, c.ContactName, c.Phone, c.Country FROM orders o INNER JOIN customers c ON o.CustomerID = c.CustomerID;", c)
 print(order_customer)
 print(order_customer.describe())
+
+# Complete
