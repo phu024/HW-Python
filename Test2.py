@@ -39,3 +39,15 @@ print(order_customer)
 print(order_customer.describe())
 
 # Complete
+
+
+# Count Country in order_customer and sort by Country show the result [Country, number of orders]
+order_customer_country = order_customer.groupby('Country').count()
+# change name header OrderID to number of orders
+order_customer_country.rename(columns={'OrderID': 'Number of Orders'}, inplace=True)
+# Show Country and number of orders
+print(order_customer_country[['Number of Orders']])
+
+
+order_customer_country.describe()
+print(order_customer_country[['Number of Orders']].describe())
